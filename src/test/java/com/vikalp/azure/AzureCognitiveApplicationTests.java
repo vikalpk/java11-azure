@@ -64,7 +64,7 @@ class AzureCognitiveApplicationTests {
 	@Test
 	void testPositiveSentiment() throws IOException, InterruptedException {
 
-		SentimentAnalysis analysis = this.sentimentService.requestSentimentAnalysis("I love India!", "en");
+		SentimentAnalysis analysis = this.sentimentService.requestSentimentAnalysis("I love icecream!", "en");
 		assertNotNull(analysis);
 		assertEquals("positive", analysis.getSentiment());
 	}
@@ -72,7 +72,7 @@ class AzureCognitiveApplicationTests {
 	@Test
 	void testNegativeSentiment() throws IOException, InterruptedException {
 
-		SentimentAnalysis analysis = this.sentimentService.requestSentimentAnalysis("India is not great!", "en");
+		SentimentAnalysis analysis = this.sentimentService.requestSentimentAnalysis("Icecream is horrible", "en");
 		assertNotNull(analysis);
 		assertEquals("negative", analysis.getSentiment());
 	}
